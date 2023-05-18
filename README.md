@@ -1,10 +1,10 @@
 # # Re-former
 
-![A screenshot showing a preview of the re-former.](screenshots/screenshot.png "Re-former Preview")
+![A screenshot showing a preview of the re-former.](screenshot.png "Re-former Preview")
 
 This is part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at [The Odin Project](https://www.theodinproject.com)
 
-[Click here to see a live-preview hosted on Github).](https://mononoken.github.io/<project_link>/)
+<!-- [Click here to see a live-preview hosted on Github).](https://mononoken.github.io/<project_link>/) -->
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ This is part of the Forms Project in The Odin Project’s Ruby on Rails Curricul
 
 ## General Information
 
-<project info>
+This project aims to practice creating forms in Rails. The lesson begins with creating a form using HTML and then re-creating it with Rails `#form_tag` and the newer `#form_with`.
 
 ## Acknowledgements
 
