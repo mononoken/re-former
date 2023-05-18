@@ -1,0 +1,43 @@
+<% if false %>
+  <!-- <form action="/users" method="POST" accept-charset="UTF-8"> 
+    <input type="hidden" name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+
+    <label for="user[username]">Username</label>
+    <input type="text" name="user[username]">
+
+    <label for="user[email]">Email</label>
+    <input type="email" name="user[email]">
+
+    <label for="user[password]">Password</label>
+    <input type="password" name="user[password]">
+
+    <button>Submit</button>
+  </form>
+<% end %>
+
+<% if false %>
+  <%= form_tag("/users", method: "patch") do %>
+    <%= label_tag(:username) %>
+    <%= text_field_tag(:username) %>
+    <%= label_tag(:email) %>
+    <%= email_field_tag(:email) %>
+    <%= label_tag(:password) %>
+    <%= password_field_tag(:password) %>
+    <%= submit_tag() %>
+  <% end %>
+<% end %>
+
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, 'Your user name here' %>
+  <%= form.text_field :username %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email, placeholder: 'foo@bar.com' %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.submit %>
+<% end %>
