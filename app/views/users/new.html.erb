@@ -30,6 +30,14 @@
 
 
 <%= form_with model: @user do |form| %>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <%= form.label :username, 'Your user name here' %>
   <%= form.text_field :username, value: 'username' %>
 
