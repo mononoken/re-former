@@ -30,22 +30,38 @@
 
 
 <%= form_with model: @user do |form| %>
-  <% if @user.errors.any? %>
-    <ul>
-      <% @user.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  <% end %>
+  <div class="errors">
+    <% if @user.errors.any? %>
+      <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 
-  <%= form.label :username, 'Your user name here' %>
-  <%= form.text_field :username, value: 'username' %>
+  <ul>
+    <li>
+      <div><%= form.label :username, 'Your user name here' %></div>
+      <div><%= form.text_field :username, value: 'username' %></div>
+    </li>
+    <br> 
 
-  <%= form.label :email %>
-  <%= form.email_field :email, placeholder: 'foo@bar.com' %>
+    <li>
+      <div><%= form.label :email %></div>
+      <div><%= form.email_field :email, placeholder: 'foo@bar.com' %></div>
+    </li>
+    <br>
 
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+    <li>
+      <div><%= form.label :password %></div>
+      <div><%= form.password_field :password %></div>
+    </li>
+    <br>
 
-  <%= form.submit %>
+    <li>
+      <%= form.submit %>
+    </li>
+  </ul>
+
 <% end %>
